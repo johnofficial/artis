@@ -1,0 +1,30 @@
+/* Reset text colors */
+h1, h2, h3, h4, h5, h6, p, b, li {
+  color: rgba(0, 0, 0, 0.87); }
+
+/* Set Roboto as default font family */
+* {
+  font-family: "Roboto", sans-serif; }
+
+@media (max-width: 1000px) {
+  .pad {
+    padding-left: 50px;
+    padding-right: 50px; } }
+
+@media (max-width: 775px) {
+  .pad {
+    padding-left: 20px;
+    padding-right: 20px; } }
+
+@media (max-width: 340px) {
+  .pad {
+    padding-left: 10px;
+    padding-right: 10px; } }
+
+.w-100-percent {
+  width: 100%; }
+
+.mw-1000-px {
+  max-width: 1000px; }
+  .mw-1000-px.center-container {
+    margin: auto; }
