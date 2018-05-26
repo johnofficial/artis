@@ -1,0 +1,79 @@
+<style>
+	.loader-wrap {
+		transition: .6s;
+		background-color: rgba(165, 206, 226, 1);
+		text-align: center;
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		z-index: 999;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.loader-wrap.remove {
+		opacity: 0;
+	}
+
+	#element {
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-ms-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+	}
+
+	#element {
+		animation: load 1s infinite;
+		background-color: #ffffff;
+		width: 5px;
+		height: 30px;
+		border-radius: 6px;
+	}
+
+	.loader #element {
+		display: inline-block;
+		margin: 3px;
+	}
+
+	.loader #element:nth-child(1) {
+		-webkit-animation-delay: .25s;
+		animation-delay: .25s;
+	}
+
+	.loader #element:nth-child(2) {
+		-webkit-animation-delay: .5s;
+		animation-delay: .5s;
+	}
+
+	.loader #element:nth-child(3) {
+		-webkit-animation-delay: .75s;
+		animation-delay: .75s;
+	}
+
+	.loader #element:nth-child(4) {
+		-webkit-animation-delay: 1s;
+		animation-delay: 1s;
+	}
+
+	@keyframes load {
+		0% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(2);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+</style>
+
+<div class="loader-wrap">
+	<div class="loader">
+		<div id="element"></div>
+		<div id="element"></div>
+		<div id="element"></div>
+		<div id="element"></div>
+	</div>
+</div>

@@ -1,0 +1,74 @@
+.cta-section
+  text-align: center
+  strong
+    color: $primary
+    &:last-of-type
+      margin-top: 12px
+      margin-bottom: 40px
+
+.footer-section
+  width: 100%
+  padding-top: 40px
+  padding-bottom: 40px
+  .social-icons
+    display: flex
+    max-width: 280px
+    justify-content: space-between
+    margin: auto
+    .social-icon
+      background-color: $primary
+      @media (min-width: 768px)
+        &:hover
+          background-color: $secondary
+  ul
+    padding: 0
+    margin: 0
+    margin-bottom: 20px
+    display: block
+    text-align: center
+    li
+      padding: 0
+      list-style: none
+      display: inline-block
+      margin-right: 30px
+      &:last-child
+        margin-right: 0
+      a
+        text-decoration: none
+        position: relative
+        color: $primary
+        &:before
+          content: ""
+          display: block
+          position: absolute
+          width: 0
+          height: 2px
+          background-color: $primary
+          bottom: -1px
+          left: 0
+          transition: .3s
+        &.active:before
+          width: 100%
+        @media (min-width: 768px)
+          &:hover
+            &:before
+              width: 100%
+    @media (max-width: 480px)
+      display: flex
+      justify-content: space-around
+      li
+        margin: 0
+        a
+          font-size: 14px
+
+
+.copyright
+  background-color: $primary
+  color: $white
+  font-size: 10px
+  padding: 4px
+  text-align: center
+  .classy-link
+    color: $white
+    &:before
+      background-color: $white

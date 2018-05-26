@@ -1,0 +1,12 @@
+- avatar: /assets/img/face01.jpg
+  quote: 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tellus lacus, lobortis rhoncus sem dictum, commodo pharetra lacus.
+  fullname: John Doe
+  title: Independent Constructor
+- avatar: /assets/img/face02.jpg
+  quote: 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tellus lacus, lobortis rhoncus sem dictum, commodo pharetra lacus.
+  fullname: Nick Smith
+  title: Developer
+- avatar: /assets/img/face03.jpg
+  quote: 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tellus lacus, lobortis rhoncus sem dictum, commodo pharetra lacus.
+  fullname: Samuel Jackson
+  title: Designer

@@ -1,18 +1,42 @@
 .pad
-	@media(max-width: 1000px)
-		padding-left: 50px
-		padding-right: 50px
-	@media(max-width: 775px)
-		padding-left: 20px
-		padding-right: 20px
-	@media(max-width: 340px)
-		padding-left: 10px
-		padding-right: 10px
+  padding-left: 100px
+  padding-right: 100px
+  @media(max-width: 1000px)
+    padding-left: 50px
+    padding-right: 50px
+  @media(max-width: 775px)
+    padding-left: 20px
+    padding-right: 20px
+  @media(max-width: 340px)
+    padding-left: 10px
+    padding-right: 10px
 
 .w-100-percent
 	width: 100%
 .mw-1000-px
 	max-width: 1000px 
-	&.center-container
-		margin: auto 
-		
+.mw-720
+  max-width: 720px
+
+.center-container
+  margin: auto
+
+.d-block
+  display: block
+
+
+[class$="-section"]
+  padding-top: 60px
+  padding-bottom: 60px
+  border-bottom: 1px solid $secondary
+  padding-left: 100px
+  padding-right: 100px
+  @media(max-width: 1000px)
+    padding-left: 50px
+    padding-right: 50px
+  @media(max-width: 775px)
+    padding-left: 20px
+    padding-right: 20px
+  @media(max-width: 340px)
+    padding-left: 10px
+    padding-right: 10px

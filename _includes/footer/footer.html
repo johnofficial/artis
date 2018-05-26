@@ -1,9 +1,31 @@
-<footer>
-<ul>
- <li>Footer Item</li>
- <li>Footer Item</li>
- <li>Footer Item</li>
- <li>Footer Item</li>
- <li>Footer Item</li>
-</ul>
+{% if page.permalink != "/contact/" %}
+
+	<section class="cta-section">
+		<div class="mw-720 center-container">
+			<p>
+				{{site.cta_text}}
+			</p>
+			<strong class="d-block">{{site.phone_number}}</strong>
+			<strong class="d-block">{{site.email}}</strong>
+
+			<a href="mailto:contact@artisfabrications.com" class="btn btn-secondary">{{site.send_mail}}</a>
+			<a href="{{site.base_url}}contact" class="btn btn-outline-primary">{{site.fill_form}}</a>
+		</div>
+	</section>
+
+{% endif %}
+
+<footer class="footer-section">
+	<div class="social-icons">
+		<a href="/" class="social-icon ti-facebook"></a>
+		<a href="/" class="social-icon ti-instagram"></a>
+		<a href="/" class="social-icon ti-twitter"></a>
+		<a href="/" class="social-icon ti-linkedin"></a>
+		<a href="/" class="social-icon ti-google"></a>
+	</div>
+
+
+</footer>
+<footer class="copyright">
+	{{site.copyright}}
 </footer>

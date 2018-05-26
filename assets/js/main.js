@@ -1,19 +1,32 @@
 $(function() {
-window.scrollBy(0, -1);
-mobileMenu();
-//scrollMenu();
-contactForm();
+	window.scrollBy(0, -1);
+	mobileMenu();
+	cloneMenu();
+	//scrollMenu();
+	contactForm();
+	Components.Init();
+});
 
-});
 function mobileMenu(){
-  $(".mobile-nav-toggle").on('click', function(){
-    var status = $(this).hasClass('is-open');
-    if(status){
-      $(".mobile-nav-toggle, .mobile-header").removeClass("is-open");
-    }else{
-      $(".mobile-nav-toggle, .mobile-header").addClass("is-open");
-    }
-});
+  $(".toggle-container").on('click', function(){
+    $(".toggle-container, .mobile-navigation").toggleClass("active");
+  });
+
+	$(".mobile-navigation").swipe( {
+		//Generic swipe handler for all directions
+		swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
+			$(".toggle-container, .mobile-navigation").removeClass("active");
+		},
+		//Default is 75px, set to 0 for demo so any distance triggers swipe
+		threshold: 60
+	});
+}
+function cloneMenu() {
+	var $menuItems = $(".menu-items").clone(true);
+
+	// $("").append($menuItems);
+	$(".mobile-navigation, .footer-section").prepend($menuItems);
+
 }
 
 /* Ajax Contact Form */
@@ -94,3 +107,124 @@ function scrollMenu(){
 });
 }
 */
+
+var Components = {
+	sliderControls: function () {
+
+		$.each($("[data-slider-wrap]"), function (index, $wrap) {
+			$(this).find("[data-slider-unit]").first().addClass("current");
+		});
+		$.each($("[data-slider-indicator-wrap]"), function (index, $wrap) {
+			$(this).find("[data-slider-indicator]").first().addClass("current");
+		});
+
+		$("body").on("click", "[data-slider-control]", function () {
+			var clickedControlValue = $(this).attr("data-slider-control");
+			var $sliderWrap = $(this).parent().siblings("[data-slider-wrap]");
+			var $currentSlider = $sliderWrap.find("[data-slider-unit].current");
+
+			var $indicatorWrap = $(this).parent().siblings("[data-slider-indicator-wrap]");
+			var $currentIndicator = $indicatorWrap.find("[data-slider-indicator].current");
+
+
+			$currentSlider.removeClass("current");
+			$currentIndicator.removeClass("current");
+
+			if ( clickedControlValue == "previous" ) {
+				if ( $currentSlider.is(":first-child") ) {
+					$sliderWrap.find("[data-slider-unit]:last-child").addClass("current");
+					$indicatorWrap.find("[data-slider-indicator]:last-child").addClass("current");
+				} else {
+					$currentSlider.prev().addClass("current");
+					$currentIndicator.prev().addClass("current");
+				}
+			} else {
+				if ( $currentSlider.is(":last-child") ) {
+					$sliderWrap.find("[data-slider-unit]:first-child").addClass("current");
+					$indicatorWrap.find("[data-slider-indicator]:first-child").addClass("current");
+				} else {
+					$currentSlider.next().addClass("current");
+					$currentIndicator.next().addClass("current");
+				}
+			}
+
+		});
+		$("[data-slider-unit]").swipe( {
+			//Generic swipe handler for all directions
+			swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
+				var $indicatorWrap = $(this).parent().siblings("[data-slider-indicator-wrap]");
+				var $currentIndicator = $indicatorWrap.find("[data-slider-indicator].current");
+
+				var $currentSlider = $(this);
+
+				$currentSlider.removeClass("current");
+				$currentIndicator.removeClass("current");
+
+				if($currentSlider.is(':last-child')){
+					$currentSlider.siblings(":first").addClass("current");
+					$currentIndicator.siblings(":first").addClass("current");
+				} else {
+					$currentSlider.next().addClass("current");
+					$currentIndicator.next().addClass("current");
+				}
+			},
+			swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
+				var $indicatorWrap = $(this).parent().siblings("[data-slider-indicator-wrap]");
+				var $currentIndicator = $indicatorWrap.find("[data-slider-indicator].current");
+
+				var $currentSlider = $(this);
+
+				$currentSlider.removeClass("current");
+				$currentIndicator.removeClass("current");
+
+				if($currentSlider.is(':first-child')){
+					$currentSlider.siblings(":last").addClass("current");
+					$currentIndicator.siblings(":last").addClass("current");
+				} else {
+					$currentSlider.prev().addClass("current");
+					$currentIndicator.prev().addClass("current");
+				}
+			},
+			//Default is 75px, set to 0 for demo so any distance triggers swipe
+			threshold:0
+		});
+	},
+	gallery: function () {
+
+		function showImage(imageUrl) {
+			var $image = "<aside data-galery-view>\n" +
+				"\t<img src=\""+imageUrl+"\" alt=\"{{site.title}}\">\n" +
+				"</aside>";
+
+			$("body").append($image);
+		}
+		function closeImage() {
+			$("[data-galery-view]").on("click", function () {
+				var $this = $(this);
+				$this.addClass("remove");
+				setTimeout(function () {
+					$this.remove();
+				}, 600);
+			});
+		}
+
+		$("body").on("click", "[data-galery] img", function () {
+			var imageUrl = $(this).attr("src");
+
+			showImage(imageUrl);
+			closeImage();
+		});
+	},
+	Init: function () {
+		this.sliderControls();
+		this.gallery();
+	}
+}
+
+$(window).on("load", function () {
+	console.log("loaded");
+	$(".loader-wrap").addClass("remove");
+	setTimeout(function () {
+		$(".loader-wrap").remove();
+	}, 600);
+});

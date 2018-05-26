@@ -1,0 +1,15 @@
+- image: /assets/img/slider-image-1.svg
+  title: Balustrades
+  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim cursus rhoncus. Nullam sit amet nibh.
+  button: SEE PRODUCTS
+  button_link: http://localhost:3000/product-and-services/
+- image: /assets/img/slider-image-2.svg
+  title: STAIRCASES
+  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim cursus rhoncus. Nullam sit amet nibh.
+  button: SEE PRODUCTS
+  button_link: http://localhost:3000/product-and-services/
+- image: /assets/img/slider-image-3.jpg
+  title: ARCHITECTURAL METAL WORK
+  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim cursus rhoncus. Nullam sit amet nibh.
+  button: SEE PRODUCTS
+  button_link: http://localhost:3000/product-and-services/

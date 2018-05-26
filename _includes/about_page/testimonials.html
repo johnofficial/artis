@@ -1,0 +1,40 @@
+<div class="about-page-testimonials-section">
+
+	<div class="testimonial-container">
+		<div class="testimonials-wrap" data-slider-wrap>
+
+			{% for t in site.data.testimonials %}
+
+			<div class="testimonial-card" data-slider-unit>
+				<div class="testimonial-avatar" style="background-image: url('{{t.avatar}}');"></div>
+				<p class="testimonial-content">
+					{{t.quote}}
+				</p>
+				<strong class="testimonial-name">
+					{{t.fullname}}
+				</strong>
+				<aside class="testimonial-title">
+					{{t.title}}
+				</aside>
+
+			</div>
+
+			{% endfor %}
+
+		</div>
+		<div class="testimonial-controls">
+				<span class="previous" data-slider-control="previous">
+					<i class="ti-arrow-left"></i>
+				</span>
+			<span class="next" data-slider-control="next">
+					<i class="ti-arrow-right"></i>
+				</span>
+		</div>
+		<div class="testimonial-nav" data-slider-indicator-wrap>
+			{% for t in site.data.testimonials %}
+			<span data-slider-indicator></span>
+			{% endfor %}
+		</div>
+	</div>
+
+</div>

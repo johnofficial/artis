@@ -1,0 +1,43 @@
+.what
+  padding-top: 4rem
+  padding-bottom: 4rem
+  width: 100%
+  text-align: center
+  border-bottom: 1px solid $secondary
+  .title
+    font-size: 2rem
+    font-weight: 400
+    strong
+      color: $secondary
+      font-weight: 400
+.features-container
+  margin-top: 2rem
+  overflow: auto
+  //@media (max-width: 1000px)
+  //  width: 1000px
+.features-wrap
+  //width: 100%
+  display: flex
+  justify-content: space-between
+  @media (max-width: 776px)
+    width: 900px
+  .feature
+    margin: 0 1rem
+    .bgc
+      height: 12rem
+      position: relative
+      .title
+        position: absolute
+        bottom: 0
+        width: 100%
+        background: $black06
+        height: 3rem
+        font-size: 1.5rem
+        color: $white
+        display: flex
+        justify-content: center
+        align-items: center
+    .content
+      padding: 1rem
+      font-size: 1.3rem
+      font-family: $secondary-font-family

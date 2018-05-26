@@ -1,0 +1,142 @@
+.site-header
+  box-sizing: border-box
+  padding: 0 100px
+  display: flex
+  justify-content: space-between
+  //background-color: antiquewhite
+  width: 100%
+  //height: 60px
+.logo
+  display: flex
+  //height: 100%
+  justify-content: center
+  flex-direction: column
+  .coded-logo
+    background-color: $primary
+    color: $white
+    padding: 4px 26px
+    text-transform: uppercase
+    font-size: 16px
+
+.site-navigation
+  ul
+    padding: 0
+    li
+      padding: 0
+      list-style: none
+      display: inline-block
+      margin-right: 30px
+      &:last-child
+        margin-right: 0
+      a
+        text-decoration: none
+        position: relative
+        color: $primary
+        &:before
+          content: ""
+          display: block
+          position: absolute
+          width: 0
+          height: 2px
+          background-color: $primary
+          bottom: -1px
+          left: 0
+          transition: .3s
+        &:hover, &.active
+          &:before
+            width: 100%
+
+.mobile-header, .mobile-navigation
+  display: none
+
+.toggle-container
+  width: 35px
+  height: 35px
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  span,
+  span:before,
+  span:after
+    transition: .4s
+    position: absolute
+    display: block
+    content: ""
+    width: 100%
+    height: 2px
+    background: $primary
+  span:before
+    top: -12px
+  span:after
+    bottom: -12px
+  &.active
+    span
+      background-color: transparent
+    span:before
+      transform-origin: center
+      transform: rotate(-45deg)
+      top: 0
+    span:after
+      transform-origin: center
+      transform: rotate(45deg)
+      bottom: 0
+
+@media (max-width: 800px)
+  .site-header
+    display: none
+  .mobile-header
+    width: 100%
+    height: 60px
+    padding: 0 20px
+    display: flex
+    justify-content: space-between
+
+  .toggle-wrap
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  .mobile-navigation
+    z-index: 999
+    display: block
+    transition: .3s
+    transform: translateX(-100%)
+    width: 100%
+    height: calc( 100vh - 60px )
+    background-color: $primary
+    box-sizing: border-box
+    padding: 20px
+    position: absolute
+    &.active
+      transform: translateX(0)
+    ul
+      padding: 0
+      margin: 0
+      li
+        list-style: none
+        a
+          color: $white
+          text-decoration: none
+          position: relative
+          font-size: 32px
+          display: block
+          margin: 12px auto
+          &.active
+            &:before
+              content: ""
+              display: block
+              position: absolute
+              width: 100%
+              height: 2px
+              background-color: $white
+              bottom: -1px
+              left: 0
+    .social-icons
+      display: flex
+      justify-content: space-between
+      position: absolute
+      bottom: 20px
+      left: 20px
+      right: 20px

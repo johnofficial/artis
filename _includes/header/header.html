@@ -1,9 +1,48 @@
-<header>
- <ul>
-  <li>Header Item</li>
-  <li>Header Item</li>
-  <li>Header Item</li>
-  <li>Header Item</li>
-  <li>Header Item</li>
- </ul>
+<header class="site-header">
+
+    <div class="logo">
+        <span class="coded-logo">{{site.title}}</span>
+    </div>
+
+    <nav class="site-navigation">
+        <ul class="menu-items">
+            <li>
+                <a href="{{site.base_url}}" class="{% if page.url =='/' %}active{% endif %}">{{site.home_title}}</a>
+            </li>
+            <li>
+                <a href="{{site.base_url}}about" class="{% if page.url =='/about/' %}active{% endif %}">{{site.about_title}}</a>
+            </li>
+            <li>
+                <a href="{{site.base_url}}product-and-services" class="{% if page.url =='/product-and-services/' %}active{% endif %}">{{site.product_and_services_title}}</a>
+            </li>
+            <li>
+                <a href="{{site.base_url}}contact" class="{% if page.url =='/contact/' %}active{% endif %}">{{site.contact_title}}</a>
+            </li>
+        </ul>
+    </nav>
+
 </header>
+
+<header class="mobile-header">
+    <div class="logo">
+        <span class="coded-logo">{{site.title}}</span>
+    </div>
+	<div class="toggle-wrap">
+		<div class="toggle-container">
+			<span></span>
+		</div>
+	</div>
+</header>
+
+<nav class="mobile-navigation">
+
+   <!-- Prepend Menu Items from Site Navigation -->
+
+	<div class="social-icons">
+		<span class="social-icon ti-facebook"></span>
+		<span class="social-icon ti-instagram"></span>
+		<span class="social-icon ti-twitter"></span>
+		<span class="social-icon ti-linkedin"></span>
+		<span class="social-icon ti-google"></span>
+	</div>
+</nav>

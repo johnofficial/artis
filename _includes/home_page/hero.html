@@ -1,0 +1,42 @@
+<section class="hero">
+	<div class="hero-bgc">
+		<div class="first"></div>
+		<div class="second"></div>
+	</div>
+
+	<div class="slider-wrap" data-slider-wrap>
+		{% for slide in site.data.home_page_sliders %}
+		<div class="slider-card" data-slider-unit>
+			<div class="slider-text">
+				<div>
+					<h1 class="slider-title">
+						{{slide.title}}
+					</h1>
+					<p class="slider-content">
+						{{slide.content}}
+					</p>
+					<a href="{{slide.button_link}}" class="btn btn-secondary">{{slide.button}}</a>
+				</div>
+			</div>
+			<div class="slider-image" style="background-image: url('{{slide.image}}')"></div>
+		</div>
+		{% endfor %}
+	</div>
+
+	<div class="slider-controls">
+		<span class="previous" data-slider-control="previous">
+			<i class="ti-arrow-left"></i>
+		</span>
+		<span class="next" data-slider-control="next">
+			<i class="ti-arrow-right"></i>
+		</span>
+	</div>
+
+	<div class="slider-nav" data-slider-indicator-wrap>
+		{% for slide in site.data.home_page_sliders %}
+		<span data-slider-indicator></span>
+		{% endfor %}
+	</div>
+
+
+</section>

@@ -4,6 +4,31 @@ h1, h2, h3, h4, h5, h6, p, b, li
  
 /* Set Roboto as default font family */
 *
- font-family: $default-font-family
+  font-family: $default-font-family
+  box-sizing: border-box
 
- 
+body
+  margin: 0
+  padding: 0
+
+html
+  font-size: 16px
+  @media (max-width: 776px )
+    font-size: 14px
+  @media (max-width: 380px)
+    font-size: 12px
+
+
+.title
+  margin: 0
+
+
+input, textarea
+  border: 1px solid $primary
+  border-radius: 2rem
+  padding: 1rem
+  &:focus
+    outline: none
+    border-color: $secondary
+textarea
+  resize: none

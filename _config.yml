@@ -1,6 +1,72 @@
 name: Jovan Savic
-title: Jekyll Gulp Starter Kit
 markdown: redcarpet
 highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 include: ["_pages"]
+base_url: /
+
+
+# STRINGS!!!!#
+
+# Basics
+title: Artis
+phone_number: 0081911881898
+email: contact@artisfabrications.com
+
+# Header
+home_title: Home
+about_title: About
+product_and_services_title: Products & Services
+contact_title: Contact
+
+# Footer
+cta_text: Whenever you need high-end architectural metalwork, staircases, balustrades, or railings, we are a great <strong>solution</strong> for your needs. You can contact us in couple ways. You can call us, send us mail, or fill contact form on our <a href="{{site.base_url}}contact">contact page</a>.
+send_mail: Send Mail
+fill_form: FILL FORM
+copyright: designed by <a href="https://jovansavic.com/" class="classy-link">jovansavic.com</a>
+
+# Home Page - About
+hp_about_title: New and <strong>visionary</strong> company specialized in high-end architectural metalwork, staircases, balustrades, railings. We work with steel, aluminum, bras and also we produce high-end products from wrought iron.
+
+# Home Page - How
+hp_how_title: This is <strong>how</strong> we do it
+hp_how_step_01: Here goes text (a picturesque explanation) about visitors problem/needs (Visitor needs balustrades or some different product or service by your company) to identify the visitor with the text.  (Keep short as possible)
+hp_how_step_02: How you are going to fix product to visitor? “We are going to make balustrades for you unique and every balustrade will be reviewed for quality.”
+hp_how_step_03: You will have balustrades on your stairs ASAP and you are going to enjoy the view.
+
+# Home Page - What
+hp_what_title: This is <strong>what</strong> we do
+hp_what_feature_01_title: BALUSTRADES
+hp_what_feature_01_bgc: /assets/img/feature01.png
+hp_what_feature_01_content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum placerat, ligula non mattis sagittis, ligula eros tempor ex, eu pulvinar mauris metus et risus. Ut ac diam sed nulla mattis condimentum.
+hp_what_feature_02_title: STAIRCASES
+hp_what_feature_02_bgc: /assets/img/feature02.png
+hp_what_feature_02_content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum placerat, ligula non mattis sagittis, ligula eros tempor ex, eu pulvinar mauris metus et risus. Ut ac diam sed nulla mattis condimentum.
+hp_what_feature_03_title: ARCHITECTURAL METAL WORK
+hp_what_feature_03_bgc: /assets/img/feature03.png
+hp_what_feature_03_content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum placerat, ligula non mattis sagittis, ligula eros tempor ex, eu pulvinar mauris metus et risus. Ut ac diam sed nulla mattis condimentum.
+
+
+# About Page
+about_page_title: About us
+about_page_description: “New and <strong>visionary</strong> company specialized in high-end architectural metalwork, staircases, balustrades, railings.”
+about_page_second_description: We are a new and visionary company specialized in high- end architectural metalwork , staircases, balustrades, railings. We work with steel, aluminum, bras and also we produce high-end products from wrought iron.
+about_page_vision_content: Driven by ambition and very high potential the services are made and delivered with passion and excellent work ethic by a team of humble and hardworking people focused on impressing and excelling by producing and manufacturing high quality products to the best of their ability.
+ap_gallery_title: Sneak peak from our <strong>workshop</strong>
+
+# Products & Services
+products_and_services_title: Products & Services
+products_and_services_hero_bgc: /assets/img/products-and-services-hero.png
+products_and_services_body_content_intro: Able to produce a range of products that extends from standard to specified  and unique projects, using the right techniques and required material having at all times a close cooperation with the client. The products incorporate high tech features such as stainless steel, wrought iron, glass, ceramic.
+products_and_services_body_content_outro: Highly skilled in a variety of high-end metal finishes on brass , bronze, copper, satin brushed finishes on all metals, powder coated , acid treatments and wax treatments services on all metals.
+products_and_services_feature01: ARCHITECTURAL  METAL WORK
+products_and_services_feature01_sub: ( item, item, item, item,  item )
+products_and_services_feature02: STAIRCASES
+products_and_services_feature02_sub: ( helical, straight, glass, cantilevered, curved )
+products_and_services_feature03: BALUSTRADES
+products_and_services_feature03_sub: ( mild steel, stainless steel, glass, bronze, wrought iron, shop displays, gates, railings )
+
+# Contact Page
+contact_page_title: Contact us
+contact_page_sub: You can contact us in couple ways. You can call us, send us mail, or fill contact form.
+contact_page_body_content: “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum placerat, ligula non mattis sagittis.”

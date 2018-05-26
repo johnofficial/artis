@@ -1,0 +1,57 @@
+.about-hero
+  width: 100%
+  height: 70vh
+  display: flex
+  flex-wrap: wrap
+  @media (max-width: 640px)
+    height: calc(100vh - 50px)
+  .first, .second
+    padding: 4rem 0
+    width: 50%
+    border-bottom: 1px solid $secondary
+    @media (max-width: 640px)
+      width: 100%
+      height: 50%
+  .first
+    display: flex
+    justify-content: center
+    align-items: center
+    background: $secondary
+    h1
+      color: $white
+      font-size: 4rem
+      margin: 0
+      position: relative
+      display: inline-block
+      &:before
+        display: block
+        position: absolute
+        content: ''
+        width: 80%
+        height: .3rem
+        background: $white
+        bottom: 0
+    p
+      color: $white
+      font-size: 1.3rem
+      max-width: 300px
+      strong
+        color: $primary
+  .second
+    display: flex
+    justify-content: center
+    align-items: center
+    p
+      max-width: 300px
+      text-align: right
+      font-size: 1.3rem
+      @media (max-width: 640px)
+        text-align: left
+
+
+.vision-section
+  text-align: center
+  height: calc(30vh - 50px)
+  display: flex
+  justify-content: center
+  align-items: center
